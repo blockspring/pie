@@ -1,0 +1,100 @@
+{
+  "appearance": {
+    "colors": {
+      "readable": "Colors",
+      "category": "Colors",
+      "placeholder": null,
+      "values": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"],
+      "description": "Sets the colors used in the graph. Each color will be used for 1 series. If you specify less colors than series, colors will be repeated.",
+      "type": "multiple_colors_arbitrary"
+    },
+    "show_labels": {
+      "readable": "Show labels",
+      "category": "Labels",
+      "placeholder": true,
+      "values": true,
+      "description": "Shows labels next to each section of the pie chart.",
+      "type": "boolean"
+    },
+    "minimum_label_percent": {
+      "readable": "Show label threshold %",
+      "category": "Labels",
+      "placeholder": 0.05,
+      "values": 0.05,
+      "description": "Minimum percent of pie a slice needs to have a label.",
+      "type": "number"
+    },
+    "label_type": {
+      "readable": "Format labels as",
+      "category": "Labels",
+      "placeholder": "key",
+      "values": "key",
+      "description": "Choose from 'key', 'string', or 'percent'.",
+      "type": "text"
+    },
+    "donut": {
+      "readable": "Enable donut chart",
+      "category": "Donut",
+      "placeholder": false,
+      "values": false,
+      "description": "Create a donut chart instead of pie chart.",
+      "type": "boolean"
+    },
+    "donut_hole_size": {
+      "readable": "Size of donut hole",
+      "category": "Donut",
+      "placeholder": 0.35,
+      "values": 0.35,
+      "description": "If donut is enabled, choose size of donut hole.",
+      "type": "number"
+    },
+    "donut_labels_outside": {
+      "readable": "Donut label position",
+      "category": "Donut",
+      "placeholder": false,
+      "values": false,
+      "description": "Show labels on outside of donut.",
+      "type": "boolean"
+    },
+    "legend": {
+      "readable": "Enable legend",
+      "category": "Legend",
+      "placeholder": false,
+      "values": false,
+      "description": "Show legend in graph.",
+      "type": "boolean"
+    }
+  },
+  "roles": {
+    "label":
+      {
+        "allows_multiple": false,
+        "required": true,
+        "types": ["string","date","number"],
+        "sample_columns": ["Car Type"],
+        "description":"This is the label for the pie.",
+        "default_aggregation":"pivot_by"
+      },
+    "value":
+      {
+        "allows_multiple": false,
+        "required": true,
+        "types": ["number"],
+        "sample_columns": ["Number of Purchases"],
+        "description":"This is what the pie counts up.",
+        "default_aggregation":"sum"
+      },
+    "grafly_dropdowns": {
+       "allows_multiple": true,
+       "required": false,
+       "types": [
+         "string",
+         "date",
+         "number"
+       ],
+       "sample_columns": [
+       ],
+       "description": "dropdowns."
+    }
+  }
+}

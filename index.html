@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <!-- Blockspring Boilerplate CSS -->
+    <link rel="stylesheet" href="//www.blockspring.com/graph_templates/api_v1/boilerplate.css">
+
+    <!-- Blockspring Boilerplate JS -->
+    <script src="//www.blockspring.com/graph_templates/api_v1/boilerplate.js"></script>
+
+    <!-- graph specific code -->
+      <!-- NVD3 -->
+      <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.14-beta/nv.d3.css" />
+      <link rel="stylesheet" type="text/css" href="main.css" />
+      <!-- NVD3 -->
+      <script src="//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.14-beta/nv.d3.min.js" charset="utf-8"></script>
+      <script src="graph.js"></script>
+    <!-- graph specific code -->
+      
+      <!-- Add your code to the "ready" function in the below script. -->
+      <script>
+        Block.ready(graph.draw, graph.redraw);
+      </script>
+  </head>
+  <body>
+    <div id="dropdowns"></div>
+    <div id="chart">
+    </div>
+  </body>
+</html>
